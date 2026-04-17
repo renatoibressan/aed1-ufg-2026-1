@@ -3,8 +3,6 @@
 // Joãozinho e o Labirinto
 int visit[N][N];
 
-void preencheMatriz(int n);
-
 void saida(int n, int m[N][N], int l, int c, int *flag);
 
 int main() {
@@ -15,22 +13,12 @@ int main() {
             scanf("%d", &m[i][j]);
         }
     }
-    preencheMatriz(n);
     saida(n, m, 0, 0, &flag);
     printf("%d\n", flag);
     return 0;
 }
 
-void preencheMatriz(int n) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            visit[i][j] = 0;
-        }
-    }
-}
-
 void saida(int n, int m[N][N], int l, int c, int *flag) {
-    if (l < 0 || l > n - 1 || c < 0 || c > n - 1) return;
     if (m[l][c] == 0) return;
     if (visit[l][c] == 1) return;
     if (l == n - 1 && c == n - 1) {
