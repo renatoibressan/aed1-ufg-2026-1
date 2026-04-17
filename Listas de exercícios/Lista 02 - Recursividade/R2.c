@@ -5,8 +5,6 @@ int aux[N], perm[N];
 
 void vetorOriginal(int v[], int n);
 
-void inicializarVetor(int n);
-
 void permutacoes(int v[], int n, int idx);
 
 int main() {
@@ -22,12 +20,6 @@ void vetorOriginal(int v[], int n) {
     for (int i = 0; i < n; i++) {
         v[i] = k;
         k++;
-    }
-}
-
-void inicializarVetor(int n) {
-    for (int i = 0; i < n; i++) {
-        aux[i] = 0;
     }
 }
 
