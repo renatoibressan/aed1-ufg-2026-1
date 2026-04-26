@@ -14,10 +14,8 @@ int main() {
         printf("Insira o %d-esimo valor do vetor: ", i + 1);
         scanf("%d", &v[i]);
     }
-    printf("Vetor desordenado:");
-    imprime_vetor(v, n);
-    printf("Vetor ordenado com Bubble Sort:");
+    imprime_vetor("Vetor desordenado:", v, n);
     bubble_sort(v, n);
-    imprime_vetor(v, n);
+    imprime_vetor("Vetor ordenado com Bubble Sort:", v, n);
     return 0;
 }
