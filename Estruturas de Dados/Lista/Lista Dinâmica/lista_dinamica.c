@@ -2,24 +2,20 @@
 #include <stdlib.h>
 #include "lista_dinamica.h"
 
-void insere_inicio(No **head, int val) {
+No* insere_inicio(No *head, int val) {
     No *novo = malloc(sizeof(No));
     novo->dado = val;
-    novo->prox = *head;
-    *head = novo;
+    novo->prox = head;
+    return novo;
 }
 
-void imprime_lista(const char *mensagem, No *no) {
-    No *lista = no;
-    int i = 0;
+void imprime_lista(const char *mensagem, No *head) {
     printf("%s\n[", mensagem);
-    while (lista) {
-        if (i > 0) printf(" -> ");
-        printf("%d", lista->dado);
-        lista = lista->prox;
-        i++;
+    while (head) {
+        printf("%d -> ", head->dado);
+        head = head->prox;
     }
-    printf("]\n");
+    printf("NULL]\n");
 }
 
 void libera_lista(No **head) {

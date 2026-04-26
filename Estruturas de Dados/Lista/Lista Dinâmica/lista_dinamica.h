@@ -3,6 +3,6 @@ typedef struct no {
     struct no *prox;
 } No;
 
-void insere_inicio(No **head, int val);
-void imprime_lista(const char *mensagem, No *no);
+No* insere_inicio(No *head, int val);
+void imprime_lista(const char *mensagem, No *head);
 void libera_lista(No **head);

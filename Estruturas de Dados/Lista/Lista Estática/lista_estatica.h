@@ -1,4 +1,4 @@
-static const int MAX = 100;
+#define MAX 100
 
 typedef struct {
     int qtd;

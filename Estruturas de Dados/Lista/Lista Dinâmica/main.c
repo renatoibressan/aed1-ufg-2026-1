@@ -12,7 +12,7 @@ int main() {
             printf("Valor invalido!\n(Operacao encerrada)\n");
             break;
         }
-        insere_inicio(&lista, x);
+        lista = insere_inicio(lista, x);
     }
     imprime_lista("Lista final:", lista);
     libera_lista(&lista);
