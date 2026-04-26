@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include "bubble_sort.h"
+#define N 100000
+
+int main() {
+    int v[N], n;
+    printf("Insira o tamanho do vetor: ");
+    scanf("%d", &n);
+    if (n < 0 || n > N) {
+        printf("Tamanho invalido!\n(Programa abortado)\n");
+        return 1;
+    }
+    for (int i = 0; i < n; i++) {
+        printf("Insira o %d-esimo valor do vetor: ", i + 1);
+        scanf("%d", &v[i]);
+    }
+    printf("Vetor desordenado:");
+    imprime_vetor(v, n);
+    printf("Vetor ordenado com Bubble Sort:");
+    bubble_sort(v, n);
+    imprime_vetor(v, n);
+    return 0;
+}
