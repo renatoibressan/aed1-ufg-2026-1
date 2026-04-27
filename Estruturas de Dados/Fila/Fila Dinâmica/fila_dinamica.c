@@ -32,12 +32,12 @@ int dequeue(Fila *f, int *val) {
 }
 
 void imprime_fila(const char *mensagem, No *head) {
-    printf("%s\n{", mensagem);
+    printf("%s\n", mensagem);
     while (head) {
         printf("[%d] -> ", head->dado);
         head = head->prox;
     }
-    printf("NULL}\n");
+    printf("NULL\n");
 }
 
 void libera_fila(Fila *f) {
