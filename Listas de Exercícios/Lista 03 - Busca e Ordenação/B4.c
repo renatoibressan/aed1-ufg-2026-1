@@ -15,7 +15,7 @@ int main() {
     scanf("%d %lld", &n, &p);
     if (n < 1 || n > N) return 1;
     v = (int *)malloc(n*sizeof(int));
-    if (v == NULL) return 1;
+    if (!v) return 1;
     for (int i = 0; i < n; i++) {
         scanf("%d", &v[i]);
     }

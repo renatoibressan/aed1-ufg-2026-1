@@ -6,8 +6,6 @@ void mesclaVetor(int *v, int aux[], int inicial, int meio, int final);
 
 void ordenaVetor(int *v, int aux[], int inicial, int final);
 
-int mediana(int *v, int n);
-
 long long modulo(long long n);
 
 long long somaDistancias(int *v, int n);
@@ -17,7 +15,7 @@ int main() {
     scanf("%d", &n);
     if (n < 1 || n > N) return 1;
     v = (int *)malloc(n*sizeof(int));
-    if (v == NULL) return 1;
+    if (!v) return 1;
     for (int i = 0; i < n; i++) {
         scanf("%d", &v[i]);
     }
@@ -52,17 +50,13 @@ void ordenaVetor(int *v, int aux[], int inicial, int final) {
     }
 }
 
-int mediana(int *v, int n) {
-    return v[n / 2];
-}
-
 long long modulo(long long n) {
     return (n < 0) ? -n : n;
 }
 
 long long somaDistancias(int *v, int n) {
     long long soma = 0;
-    int x = mediana(v, n);
+    int x = v[n / 2];
     for (int i = 0; i < n; i++) {
         int distancia = x - v[i];
         soma += modulo(distancia);

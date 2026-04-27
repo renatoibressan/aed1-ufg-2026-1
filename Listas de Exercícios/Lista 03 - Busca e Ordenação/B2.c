@@ -13,10 +13,10 @@ int main() {
     scanf("%d %d", &n, &q);
     if (n < 1 || n > N || q < 1 || q > Q) return 1;
     m = (int **)malloc(n*sizeof(int*));
-    if (m == NULL) return 1;
+    if (!m) return 1;
     for (i = 0; i < n; i++) {
         m[i] = (int *)malloc(n*sizeof(int));
-        if (m[i] == NULL) return 1;
+        if (!m[i]) return 1;
         for (j = 0; j < n; j++) {
             scanf("%d", &m[i][j]);
         }

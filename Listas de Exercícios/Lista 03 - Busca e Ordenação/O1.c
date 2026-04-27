@@ -11,13 +11,10 @@ int main() {
     int *v = NULL, aux[N];
     scanf("%d", &n);
     v = (int *)malloc(n*sizeof(int));
-    if (v == NULL) return 1;
+    if (!v) return 1;
     for (i = 0; i < n; i++) {
         scanf("%d", &v[i]);
     }
-    int esquerda = 0;
-    int direita = n - 1;
-    int meio = (esquerda + direita) / 2;
     ordenaVetor(v, aux, 0, n - 1);
     for (i = 0; i < n; i++) {
         if (i > 0) printf(" ");
