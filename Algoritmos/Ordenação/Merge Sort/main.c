@@ -4,7 +4,7 @@
 #define N 1000000
 
 int main() {
-    int *v = NULL, n, aux[N];
+    int *v = NULL, n, *aux = NULL;
     printf("Insira o tamanho do vetor: ");
     scanf("%d", &n);
     if (n < 0 || n > N) {
@@ -12,7 +12,8 @@ int main() {
         return 1;
     }
     v = (int *)malloc(n*sizeof(int));
-    if (!v) {
+    aux = (int *)malloc(n*sizeof(int));
+    if ((!v) || (!aux)) {
         printf("Erro ao alocar memoria!\n(Programa abortado)\n");
         return 1;
     }
