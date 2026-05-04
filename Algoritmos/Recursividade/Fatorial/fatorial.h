@@ -1,1 +1,0 @@
-unsigned long int fatorial(int n);

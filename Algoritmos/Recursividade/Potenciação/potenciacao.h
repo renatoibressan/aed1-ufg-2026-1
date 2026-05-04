@@ -1,1 +1,0 @@
-long potenciacao(int n, int x);
