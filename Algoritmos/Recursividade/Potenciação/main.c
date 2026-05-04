@@ -10,7 +10,7 @@ int main() {
         return 1;
     }
     if (x < 0) {
-        printf("Valor %d invalido!\n(Programa abortado)\n", n);
+        printf("Valor %d invalido!\n(Programa abortado)\n", x);
         return 1;
     }
     resultado = potenciacao(n, x);
