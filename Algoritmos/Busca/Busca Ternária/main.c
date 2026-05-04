@@ -17,6 +17,6 @@ int main() {
     printf("Insira o valor para ser encontrado: ");
     scanf("%d", &x);
     idx = busca_ternaria(v, 0, n - 1, x);
-    (idx != -1) ? printf("O valor %d se encontra no indice %d do vetor\n", x, idx + 1) : printf("O valor %d nao se encontra no vetor\n", x);
+    (idx != -1) ? printf("O valor %d se encontra no indice %d do vetor\n", x, idx) : printf("O valor %d nao se encontra no vetor\n", x);
     return 0;
 }

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "quick_sort.h"
 #define N 1000000
 
@@ -20,6 +21,7 @@ int main() {
         printf("Insira o %d-esimo valor do vetor: ", i + 1);
         scanf("%d", &v[i]);
     }
+    srand(time(NULL));
     imprime_vetor("Vetor desordenado:", v, n);
     quick_sort(v, 0, n - 1);
     imprime_vetor("Vetor ordenado com Quick Sort:", v, n);

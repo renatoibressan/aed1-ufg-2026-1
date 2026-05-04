@@ -1,11 +1,12 @@
 #include <stdio.h>
-#include "busca_linear.h"
+#include "radix_sort.h"
+#define N 100000
 
 int main() {
-    int v[100], n, x, idx;
+    int v[N], n;
     printf("Insira o tamanho do vetor: ");
     scanf("%d", &n);
-    if (n < 0 || n > 100) {
+    if (n < 0 || n > N) {
         printf("Tamanho invalido!\n(Programa abortado)\n");
         return 1;
     }
@@ -13,9 +14,8 @@ int main() {
         printf("Insira o %d-esimo valor do vetor: ", i + 1);
         scanf("%d", &v[i]);
     }
-    printf("Insira o valor para ser encontrado: ");
-    scanf("%d", &x);
-    idx = busca_linear(v, n, x);
-    (idx != -1) ? printf("O valor %d se encontra no indice %d do vetor\n", x, idx) : printf("O valor %d nao se encontra no vetor\n", x);
+    imprime_vetor("Vetor desordenado:", v, n);
+    radix_sort(v, n);
+    imprime_vetor("Vetor ordenado com Radix Sort:", v, n);
     return 0;
 }

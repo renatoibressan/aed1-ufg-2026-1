@@ -16,8 +16,8 @@ int busca_saddleback(int m[100][100], int n, int x, int pos[2]) {
     int i = 0, j = n - 1;
     while (i < n && j >= 0) {
         if (m[i][j] == x) {
-            pos[0] = i + 1;
-            pos[1] = j + 1;
+            pos[0] = i;
+            pos[1] = j;
             return 1;
         }
         else if (m[i][j] > x) j--;

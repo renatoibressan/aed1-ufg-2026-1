@@ -2,7 +2,8 @@
 #include "mdc.h"
 
 int main() {
-    int a, b, resultado;
+    int a, b, gcd;
+    unsigned long int lcm;
     printf("Insira dois numeros naturais: ");
     if (scanf("%d %d", &a, &b) != 2) {
         printf("Leitura nao suportada!\n(Programa abortado)\n");
@@ -15,7 +16,9 @@ int main() {
         printf("invalido(s)!\n(Programa abortado)\n");
         return 1;
     }
-    resultado = mdc(a, b);
-    printf("mdc(%d, %d) = %d\n", a, b, resultado);
+    gcd = mdc(a, b);
+    lcm = mmc(a, b);
+    printf("mdc(%d, %d) = %d\n", a, b, gcd);
+    printf("mmc(%d, %d) = %lu\n", a, b, lcm);
     return 0;
 }
